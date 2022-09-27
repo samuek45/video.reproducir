@@ -18,11 +18,6 @@ namespace video.reproducir
             InitializeComponent();
         }
 
-        private void lblparar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btncargar_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog()==DialogResult.OK)
@@ -45,11 +40,14 @@ namespace video.reproducir
 
         private void btnpausa_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.pause();        }
+            axWindowsMediaPlayer1.Ctlcontrols.pause();
+        }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnAbrirPdf_Click(object sender, EventArgs e)
         {
-
+            pdfApp pdf = new pdfApp();
+            pdf.Show();
+            this.Hide();
         }
     }
 }
