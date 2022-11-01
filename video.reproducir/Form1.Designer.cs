@@ -30,29 +30,21 @@ namespace video.reproducir
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.btncargar = new System.Windows.Forms.Button();
             this.btnreproducir = new System.Windows.Forms.Button();
             this.btnparar = new System.Windows.Forms.Button();
             this.btnpausa = new System.Windows.Forms.Button();
-            this.lblruta = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnAbrirPdf = new System.Windows.Forms.Button();
+            this.btnabrirNavegador = new System.Windows.Forms.Button();
+            this.lblruta = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(95, -2);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(1014, 264);
-            this.axWindowsMediaPlayer1.TabIndex = 4;
-            // 
             // btncargar
             // 
-            this.btncargar.Location = new System.Drawing.Point(95, 284);
+            this.btncargar.Location = new System.Drawing.Point(12, 299);
             this.btncargar.Name = "btncargar";
             this.btncargar.Size = new System.Drawing.Size(75, 23);
             this.btncargar.TabIndex = 5;
@@ -62,7 +54,7 @@ namespace video.reproducir
             // 
             // btnreproducir
             // 
-            this.btnreproducir.Location = new System.Drawing.Point(195, 284);
+            this.btnreproducir.Location = new System.Drawing.Point(107, 299);
             this.btnreproducir.Name = "btnreproducir";
             this.btnreproducir.Size = new System.Drawing.Size(75, 23);
             this.btnreproducir.TabIndex = 6;
@@ -72,7 +64,7 @@ namespace video.reproducir
             // 
             // btnparar
             // 
-            this.btnparar.Location = new System.Drawing.Point(302, 284);
+            this.btnparar.Location = new System.Drawing.Point(205, 299);
             this.btnparar.Name = "btnparar";
             this.btnparar.Size = new System.Drawing.Size(75, 23);
             this.btnparar.TabIndex = 7;
@@ -82,22 +74,13 @@ namespace video.reproducir
             // 
             // btnpausa
             // 
-            this.btnpausa.Location = new System.Drawing.Point(404, 284);
+            this.btnpausa.Location = new System.Drawing.Point(299, 299);
             this.btnpausa.Name = "btnpausa";
             this.btnpausa.Size = new System.Drawing.Size(75, 23);
             this.btnpausa.TabIndex = 8;
             this.btnpausa.Text = "pausa";
             this.btnpausa.UseVisualStyleBackColor = true;
             this.btnpausa.Click += new System.EventHandler(this.btnpausa_Click);
-            // 
-            // lblruta
-            // 
-            this.lblruta.AutoSize = true;
-            this.lblruta.Location = new System.Drawing.Point(30, 363);
-            this.lblruta.Name = "lblruta";
-            this.lblruta.Size = new System.Drawing.Size(35, 13);
-            this.lblruta.TabIndex = 9;
-            this.lblruta.Text = "label1";
             // 
             // openFileDialog1
             // 
@@ -106,21 +89,50 @@ namespace video.reproducir
             // 
             // btnAbrirPdf
             // 
-            this.btnAbrirPdf.Location = new System.Drawing.Point(95, 428);
+            this.btnAbrirPdf.Location = new System.Drawing.Point(614, 347);
             this.btnAbrirPdf.Name = "btnAbrirPdf";
-            this.btnAbrirPdf.Size = new System.Drawing.Size(123, 53);
+            this.btnAbrirPdf.Size = new System.Drawing.Size(92, 38);
             this.btnAbrirPdf.TabIndex = 11;
             this.btnAbrirPdf.Text = "Abrir PDF";
             this.btnAbrirPdf.UseVisualStyleBackColor = true;
             this.btnAbrirPdf.Click += new System.EventHandler(this.btnAbrirPdf_Click);
             // 
+            // btnabrirNavegador
+            // 
+            this.btnabrirNavegador.Location = new System.Drawing.Point(744, 347);
+            this.btnabrirNavegador.Name = "btnabrirNavegador";
+            this.btnabrirNavegador.Size = new System.Drawing.Size(97, 38);
+            this.btnabrirNavegador.TabIndex = 12;
+            this.btnabrirNavegador.Text = "Abrir WebBrowser";
+            this.btnabrirNavegador.UseVisualStyleBackColor = true;
+            this.btnabrirNavegador.Click += new System.EventHandler(this.btnabrirNavegador_Click);
+            // 
+            // lblruta
+            // 
+            this.lblruta.AutoSize = true;
+            this.lblruta.Location = new System.Drawing.Point(23, 347);
+            this.lblruta.Name = "lblruta";
+            this.lblruta.Size = new System.Drawing.Size(30, 13);
+            this.lblruta.TabIndex = 13;
+            this.lblruta.Text = "Ruta";
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 23);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(829, 253);
+            this.axWindowsMediaPlayer1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 595);
-            this.Controls.Add(this.btnAbrirPdf);
+            this.ClientSize = new System.Drawing.Size(866, 410);
             this.Controls.Add(this.lblruta);
+            this.Controls.Add(this.btnabrirNavegador);
+            this.Controls.Add(this.btnAbrirPdf);
             this.Controls.Add(this.btnpausa);
             this.Controls.Add(this.btnparar);
             this.Controls.Add(this.btnreproducir);
@@ -140,9 +152,10 @@ namespace video.reproducir
         private System.Windows.Forms.Button btnreproducir;
         private System.Windows.Forms.Button btnparar;
         private System.Windows.Forms.Button btnpausa;
-        private System.Windows.Forms.Label lblruta;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnAbrirPdf;
+        private System.Windows.Forms.Button btnabrirNavegador;
+        private System.Windows.Forms.Label lblruta;
     }
 }
 

@@ -25,18 +25,18 @@ namespace video.reproducir
                 ruta = openFileDialog1.FileName;
                 lblruta.Text = ruta;
             }
-           
-
         }
 
         private void btnreproducir_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.URL = ruta;
-            axWindowsMediaPlayer1.Ctlcontrols.play();        }
+            axWindowsMediaPlayer1.Ctlcontrols.play();        
+        }
 
         private void btnparar_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.stop();        }
+            axWindowsMediaPlayer1.Ctlcontrols.stop();        
+        }
 
         private void btnpausa_Click(object sender, EventArgs e)
         {
@@ -47,6 +47,13 @@ namespace video.reproducir
         {
             pdfApp pdf = new pdfApp();
             pdf.Show();
+            this.Hide();
+        }
+
+        private void btnabrirNavegador_Click(object sender, EventArgs e)
+        {
+            webBrowserApp webapp = new webBrowserApp();
+            webapp.Show();
             this.Hide();
         }
     }
